@@ -1,0 +1,28 @@
+
+
+@media (max-width: 480px) {
+    section {
+        padding: 4rem 1.5rem;
+    }
+
+    .hero-image img {
+        max-width: 260px;
+    }
+
+    .timeline-item, .project-info, .contact-form, .skill-card, .cert-item {
+        padding: 1.5rem;
+    }
+
+    /* Force all grids to a single column on very small phones to prevent horizontal scrolling */
+    .projects-container,
+    .skills-container,
+    .cert-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-name-banner p { font-size: 2rem; }
+    .hobbies-content { padding: 1.75rem; }
+}
