@@ -1,0 +1,168 @@
+/* =========================================
+   MERCY THUO | NEW PREMIUM LOOK
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap');
+
+/* =========================================
+   ROOT VARIABLES (THEMING)
+========================================= */
+:root {
+    /* Teal and green theme colours */
+    --primary: #0F766E;
+    --primary-dark: #115E59;
+    --primary-light: #2DD4BF;
+    --cyan: #15803D;
+
+    /* Light Theme (Default) */
+    --background: #FAFAF9; /* Warm off-white */
+    --background-grad: linear-gradient(135deg, #ECFDF5 0%, #FAFAF9 50%, #E0F2FE 100%);
+    --surface: #FFFFFF;
+    --surface-light: #F5F5F4;
+    --text: #1C1917; /* Very dark stone */
+    --text-muted: #78716C;
+    --border: transparent; /* Removing hard borders for a cleaner look */
+    --shadow-sm: 0 4px 20px rgba(0,0,0,0.03);
+    --shadow-md: 0 8px 30px rgba(0,0,0,0.06);
+    --shadow-lg: 0 15px 40px rgba(0,0,0,0.08);
+
+    /* Misc */
+    --radius: 16px;
+}
+
+[data-theme="dark"] {
+    /* Deep rich dark theme */
+    --background: #071A18;
+    --background-grad: linear-gradient(135deg, #0B2421 0%, #071A18 50%, #123B35 100%);
+    --surface: #102A27;
+    --surface-light: #1B3A36;
+    --text: #FAFAFA;
+    --text-muted: #A1A1AA;
+    --border: transparent;
+    --shadow-sm: 0 4px 20px rgba(0,0,0,0.4);
+    --shadow-md: 0 8px 30px rgba(0,0,0,0.6);
+    --shadow-lg: 0 15px 40px rgba(0,0,0,0.8);
+}
+
+/* =========================================
+   RESET & BASE
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button:focus {
+    outline: none;
+}
+
+html {
+    scroll-behavior: auto;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    background-image: var(--background-grad);
+    background-attachment: fixed;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif; /* Elegant Serif for headings */
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--text);
+}
+
+.section-header {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    letter-spacing: -0.01em;
+}
+
+.section-header h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    margin: 20px auto 0;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    margin-top: 1.5rem;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: 999px; /* Pill shaped buttons */
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(15, 118, 110, 0.3);
+}
+
+.btn-outline {
+    background-color: var(--surface);
+    color: var(--text);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-text {
+    background-color: transparent;
+    color: var(--primary);
+    padding: 14px 20px;
+}
+
+.btn-small {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    border-radius: 999px;
+    background-color: var(--primary);
+    color: #FFFFFF;
+}
+
+.btn-small.btn-outline {
+    background-color: var(--surface-light);
+    color: var(--text);
+}
