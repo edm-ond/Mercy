@@ -1,0 +1,221 @@
+
+
+/* =========================================
+   CERTIFICATIONS
+========================================= */
+.cert-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.cert-item {
+    background-color: var(--surface);
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.cert-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.cert-issuer {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cert-date {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: var(--surface-light);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.info-card {
+    background-color: transparent;
+    padding: 0;
+}
+
+.info-card h4 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-card p, .info-card a {
+    color: var(--text);
+    font-size: 1.1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.social-links a {
+    font-weight: 500;
+}
+
+.contact-form {
+    background-color: var(--surface);
+    padding: 3rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background-color: var(--surface-light);
+    border: none;
+    border-radius: 12px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.error-msg {
+    display: none;
+    color: #ef4444;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+/* Show validation errors when the script adds .error to a field group */
+.form-group.error .error-msg {
+    display: block;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+    outline: 2px solid #ef4444;
+    outline-offset: 2px;
+}
+
+.form-status {
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    background-color: #166534;
+    padding: 4rem 2rem;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.footer-bottom a {
+    color: #ffffff;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+@media (max-width: 1024px) {
+    .hero {
+        gap: 3rem;
+    }
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 73px;
+        left: 0;
+        width: 100%;
+        background-color: var(--surface);
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 2rem;
+        gap: 2rem;
+        box-shadow: var(--shadow-md);
+        display: none;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
